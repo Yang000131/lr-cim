@@ -17,7 +17,7 @@ hero:
       link: https://github.com/vuejs/vitepress
 
 features:
-  - icon:  📝
+  - icon: 📝
     title: Fully Customizable
     details: No core utilities, all functionalities are provided via presets.
     link: /guide/
