@@ -6,7 +6,7 @@ hero:
   text: "Computer Integrated Manufacturing Docs"
   tagline: Precision Silicon, Intelligent Manufacturing.
   image:
-    src: /it.svg
+    src: /chip.svg
     alt: CIM
   actions:
     - theme: brand

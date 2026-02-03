@@ -11,8 +11,9 @@ export default defineConfig({
   title: "LR-CIM",
   lang: "zh-CN",
   description: "计算机集成制造文档",
+  head: [["link", { rel: "icon", href: "/lr-cim-logo-3.svg" }]],
   themeConfig: {
-    logo: { src: "./lr-cim-logo.svg", width: 24, height: 24 },
+    logo: { src: "/lr-cim-logo-3.svg", width: 32, height: 32, alt: "lr-cim" },
     search: {
       provider: "local",
       options: searchOptions,
@@ -24,7 +25,7 @@ export default defineConfig({
       { icon: "bilibili", link: "https://space.bilibili.com/516750485" },
     ],
     sidebar: {
-      "/mes/": { base: "/mes/", items: sidebarMES }
+      "/mes/": { base: "/mes/", items: sidebarMES },
     },
     outline: {
       level: [2, 4],
