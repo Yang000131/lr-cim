@@ -6,6 +6,7 @@ import {
 } from "vitepress-plugin-group-icons";
 import { nav, sidebarMES, searchOptions } from "./theme/config";
 import vitepressProtectPlugin from "vitepress-protect-plugin";
+import { vitepressMarkmapPreview } from "vitepress-markmap-preview";
 
 export default defineConfig({
   title: "LR-CIM",
@@ -21,7 +22,7 @@ export default defineConfig({
     nav,
     socialLinks: [
       { icon: "github", link: "https://github.com/Yang000131" },
-      { icon: "gitee", link: "https://gitee.com/yang_311414/lr-408" },
+      { icon: "gitee", link: "https://gitee.com/yang_311414" },
       { icon: "bilibili", link: "https://space.bilibili.com/516750485" },
     ],
     sidebar: {
@@ -32,7 +33,7 @@ export default defineConfig({
       label: "页面导航",
     },
     editLink: {
-      pattern: "https://gitee.com/yang_311414/lr-408/blob/doc/docs/:path",
+      pattern: "https://gitee.com/yang_311414/cim-doc/blob/master/docs/:path",
       text: "在Gitee编辑本页",
     },
     docFooter: {
@@ -100,6 +101,7 @@ export default defineConfig({
         if (tokens[idx].tag === "h1") htmlResult += `<ArticleMetadata />`;
         return htmlResult;
       };
+      vitepressMarkmapPreview(md);
     },
   },
 });
