@@ -5,6 +5,7 @@ import { countWord, toISODate } from "../util/function";
 
 const { frontmatter, page } = useData();
 
+const layout = computed(() => frontmatter.value.layout);
 const author = computed(() => frontmatter.value.author || "一可爱小白兔");
 const firstCommit = computed(() => toISODate(frontmatter.value.firstCommit));
 const lastUpdate = computed(() => toISODate(page.value.lastUpdated));
@@ -48,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="lr-meta">
+  <div v-if="layout === `doc`" class="lr-meta">
     <div v-if="author" class="meta-item">
       🧑‍💻 作者:
       <span>{{ author }}</span>
