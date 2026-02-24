@@ -12,7 +12,7 @@ export default defineConfig({
   title: "LR-CIM",
   lang: "zh-CN",
   description: "计算机集成制造文档",
-  head: [["link", { rel: "icon", href: "/lr-cim-logo-3.svg" }]],
+  head: [["link", { rel: "icon", href: "public/lr-cim-logo-3.svg" }]],
   themeConfig: {
     logo: { src: "/lr-cim-logo-3.svg", width: 32, height: 32, alt: "lr-cim" },
     search: {
