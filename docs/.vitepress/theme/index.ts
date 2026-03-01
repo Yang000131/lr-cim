@@ -6,6 +6,7 @@ import busuanzi from "busuanzi.pure.js";
 import ArticleMetadata from "./component/ArticleMetadata.vue";
 import "./style/index.css";
 import "virtual:group-icons.css";
+import "uno.css";
 import "vitepress-markmap-preview/dist/index.css";
 import "nprogress-v2/dist/index.css";
 import Notice from "./component/Notice.vue";

@@ -7,12 +7,14 @@ import {
 import { nav, sidebarMES, searchOptions } from "./theme/config";
 import vitepressProtectPlugin from "vitepress-protect-plugin";
 import { vitepressMarkmapPreview } from "vitepress-markmap-preview";
+import UnoCSS from "unocss/vite";
 
 export default defineConfig({
+  base: "/lr-cim/",
   title: "LR-CIM",
   lang: "zh-CN",
   description: "计算机集成制造文档",
-  head: [["link", { rel: "icon", href: "public/lr-cim-logo-3.svg" }]],
+  head: [["link", { rel: "icon", href: "/lr-cim/lr-cim-logo-3.svg" }]],
   themeConfig: {
     logo: { src: "/lr-cim-logo-3.svg", width: 32, height: 32, alt: "lr-cim" },
     search: {
@@ -77,7 +79,12 @@ export default defineConfig({
   },
   cleanUrls: true,
   vite: {
+    server: {
+      host: true,
+      strictPort: false,
+    },
     plugins: [
+      UnoCSS({ inspector: false }),
       MermaidPlugin(),
       groupIconVitePlugin(),
       vitepressProtectPlugin({

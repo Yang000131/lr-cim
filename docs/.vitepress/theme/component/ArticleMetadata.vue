@@ -5,7 +5,7 @@ import { countWord, toISODate } from "../util/function";
 
 const { frontmatter, page } = useData();
 
-const layout = computed(() => frontmatter.value.layout);
+const layout = computed(() => frontmatter.value.layout || "doc");
 const author = computed(() => frontmatter.value.author || "一可爱小白兔");
 const firstCommit = computed(() => toISODate(frontmatter.value.firstCommit));
 const lastUpdate = computed(() => toISODate(page.value.lastUpdated));

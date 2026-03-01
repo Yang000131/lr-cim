@@ -1,10 +1,32 @@
 {
+  "name": "lr-cim",
+  "version": "0.0.1",
+  "author": {
+    "name": "yang",
+    "email": "yang_000131@163.com",
+    "url": "https://github.com/yang000131/lr-cim"
+  },
+  "keywords": [
+    "CIM",
+    "MES",
+    "EAP",
+    "SPC",
+    "YMS",
+    "APC",
+    "FDC",
+    "RTD",
+    "MCS"
+  ],
   "devDependencies": {
+    "@iconify-json/carbon": "^1.2.19",
+    "@unocss/preset-icons": "^66.6.2",
+    "@unocss/preset-wind3": "^66.6.2",
     "busuanzi.pure.js": "^1.0.3",
     "markdown-it-mathjax3": "4.3.2",
     "medium-zoom": "^1.1.0",
     "mermaid": "^11.12.2",
     "nprogress-v2": "^1.1.10",
+    "unocss": "^66.6.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-protect-plugin": "^1.0.6"
