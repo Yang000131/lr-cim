@@ -5,7 +5,7 @@ name: Deploy VitePress site to Pages
 on:
   # 在推送到默认分支（通常是 main 或 master）时触发
   push:
-    branches: [main]
+    branches: [main] # 根据你的默认分支名称修改
 
   # 允许手动在工作流选项卡中触发
   workflow_dispatch:
