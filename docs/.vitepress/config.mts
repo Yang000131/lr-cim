@@ -45,8 +45,8 @@ export default defineConfig({
       label: "页面导航",
     },
     editLink: {
-      pattern: "https://gitee.com/yang_311414/cim-doc/blob/master/docs/:path",
-      text: "在Gitee编辑本页",
+      pattern: "https://github.com/Yang000131/lr-cim/blob/main/docs/:path",
+      text: "在Github编辑本页",
     },
     docFooter: {
       prev: "上一页",
