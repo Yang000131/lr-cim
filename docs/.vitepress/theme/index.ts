@@ -13,6 +13,7 @@ import Notice from "./component/Notice.vue";
 import { initComponent } from "vitepress-markmap-preview/component";
 import mediumZoom from "medium-zoom";
 import { NProgress } from "nprogress-v2/dist/index.js";
+import BackTop from "./component/BackTop.vue";
 
 let homePageStyle: HTMLStyleElement | undefined;
 const baseUrl = "/lr-cim/";
@@ -22,6 +23,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       "layout-top": () => h(Notice),
+      "doc-footer-before": () => h(BackTop),
     });
   },
   enhanceApp({ app, router, siteData }) {
