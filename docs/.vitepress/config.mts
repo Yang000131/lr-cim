@@ -10,6 +10,7 @@ import {
   sidebarPMS,
   sidebarPRMS,
   sidebarFMB,
+  sidebarReport,
   searchOptions,
 } from "./theme/config";
 import vitepressProtectPlugin from "vitepress-protect-plugin";
@@ -49,6 +50,7 @@ export default defineConfig({
       "/pms/": { base: "/pms/", items: sidebarPMS },
       "/prms/": { base: "/prms/", items: sidebarPRMS },
       "/fmb/": { base: "/fmb/", items: sidebarFMB },
+      "/report/": { base: "/report/", items: sidebarReport },
     },
     outline: {
       level: [2, 4],

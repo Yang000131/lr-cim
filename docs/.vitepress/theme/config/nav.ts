@@ -11,4 +11,5 @@ export const nav: DefaultTheme.NavItem[] = [
       { text: "FMB", link: "/subsystem/fmb" },
     ],
   },
+  { text: "Report", link: "/report" },
 ];
