@@ -27,21 +27,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要此项
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          # cache: pnpm # 根据你的包管理器改为 pnpm 或 yarn
+        uses: actions/checkout@v5
 
       - name: Install pnpm
-        run: npm install -g pnpm@10
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: Set node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
       - name: Build with VitePress
         run: pnpm run docs:build # 确保 package.json 中有这个脚本
